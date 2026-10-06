@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800&family=Archivo:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Roboto Slab', Georgia, serif;
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+  --color-paper: #f3efe6;
+  --color-card: #fbf9f4;
+  --color-ink: #1b1a17;
+  --color-dim: #6b665c;
+  --color-rule: #d8d1c2;
+  --color-vermilion: #c8401f;
+  --color-moss: #3f6b4a;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 85% -10%, #e9dcc4 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, #e6e2d3 0%, transparent 55%);
+    background-attachment: fixed;
+  }
+  ::selection { background: #c8401f; color: #fbf9f4; }
+  * { scrollbar-width: thin; scrollbar-color: #d8d1c2 transparent; }
+}
